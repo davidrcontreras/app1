@@ -12,7 +12,7 @@ app = Flask(__name__) #le mando la variable __name__ (puede ser cualquier nombre
 @app.route('/') # esto es la raíz o sea esta representado por la url https://localhost:puerto/ ese ultimo /
 #función que se envía al decorator: Es la función q se ejecuta cuando llega un request a esa URL
 def home():
-    return "Vamos Boquita carajo, un poquito maaa!"
+    return "Vamos Boquita carajo, un poquito maaa loco!"
 
 #Levantamos el server app
 #si nos devuelve correctamente la función main es porque la app esta ok, y podemos correrla, es decir levantar el webserver
