@@ -16,8 +16,8 @@ ENV FLASK_APP=app
 ENV FLASK_RUN_HOST=0.0.0.0
 
 # Expose port (Flask default)
-EXPOSE 8080
+EXPOSE 5000
 
 # Run the app
-CMD ["pytest"]
-#CMD ["flask", "run"]
+CMD ["flask", "run"]
+#CMD ["pytest"]

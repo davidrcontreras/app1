@@ -17,5 +17,5 @@ def home():
 #Levantamos el server app
 #si nos devuelve correctamente la función main es porque la app esta ok, y podemos correrla, es decir levantar el webserver
 if __name__ == '__main__':
-    app.run(host="0.0.0.0",port=8080,debug=True)
-    #app.run()
+    #app.run(host="0.0.0.0",port=8080,debug=True)
+    app.run()
