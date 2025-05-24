@@ -16,7 +16,7 @@ ENV FLASK_APP=app
 ENV FLASK_RUN_HOST=0.0.0.0
 
 # Expose port (Flask default)
-EXPOSE 5000
+EXPOSE 8080
 
 # Run the app
 CMD ["pytest"]
