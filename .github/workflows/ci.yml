@@ -1,3 +1,4 @@
+# yml to  Step 4- Add Deployment to GitHub Actions (optional CI/CD)
 name: My Flask App CI
 
 on:
@@ -24,8 +25,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install -r requirements.txt
 
-    - name: Basic Flask App Test
+    - name: Run pytest
       run: |
-        python -m flask --app app run &
-        sleep 5
-        curl -f http://127.0.0.1:5000/
+        pytest
+# Seguido verificamos si pasó el test se dispara el webhook para avisrle a render que deploye nomás        
+    - name: Deploy to Render
+      if: success()
+      run: |
+        curl -X "${{ secrets.RENDER_DEPLOY_HOOK }}"
